@@ -1,4 +1,4 @@
-import UpdatePost from "./updatePost";
+import UpdatePost from "./updatePost/updatePost"
 import { useState } from "react"
 
 const SinglePostComponent = (props) => {
@@ -20,11 +20,11 @@ const SinglePostComponent = (props) => {
             <h5>Description: {props.post.description}</h5>
             <p>Yes: {props.post.votesYes}</p>
             <p>No: {props.post.votesNo}</p>
-            <button onClick={()=>props.deletePost(props.post.id)}>Delete</button>
+            <button type="button" onClick={()=>props.deletePost(props.post.id)}>Delete</button>
             {showing ?
             <UpdatePost post={props.post} handleUpdateInputChange={props.handleUpdateInputChange} updatePost={props.updatePost} ></UpdatePost>
             :
-            <button onClick={toggleShowing}>Edit</button>
+            <button type="button" onClick={toggleShowing}>Edit</button>
             }  
               
         </div>

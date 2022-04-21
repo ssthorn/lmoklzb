@@ -42,19 +42,24 @@ class ClassPostContainer extends React.Component {
         super()
         this.state = {
             posts: [],
-            newPost: {
+            newPosts: {
                 name: "",
+                description: "",
+                votesYes:0,
+                votesNo:0
+            },
+            updatePosts:{
+                name:"",
                 description: "",
                 votesYes:0,
                 votesNo:0
             }
         }
     }
-    handleNewPostInputChange = (e) => {
+    handleNewInputChange = (e) => {
         this.setState({
-            newPost: {
-                // ...newPost,
-                ...this.state.newPost,
+            newPosts: {
+                ...this.state.newPosts,
                 [e.target.name]: e.target.value
             }
         })
@@ -62,10 +67,10 @@ class ClassPostContainer extends React.Component {
     }
     createNewPost = async (e) => {
         e.preventDefault();
-        console.log(this.state.newPost)
+        console.log(this.state.newPosts)
         const apiResponse = await fetch('http://localhost:8000/api/posts/', {
             method: 'POST',
-            body: JSON.stringify(this.state.newPost),
+            body: JSON.stringify(this.state.newPosts),
             headers: {
                 "Content-Type": 'application/json'
             }

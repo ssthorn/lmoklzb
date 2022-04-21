@@ -69,15 +69,7 @@ const New = (props) => {
     // }
     return(
         <div>
-            <h5>create new post</h5>
-            <form onSubmit={props.createNewPost}>
-                name: <input onChange={props.handleNewPostInputChange} type="text" name="name" id="" />
-                <br></br>
-                description: <input onChange={props.handleNewPostInputChange} type="text" name="description"/>
-                <br></br>
-                <button  type="submit">submit</button>
-                
-            </form>
+            
         </div>
 
 

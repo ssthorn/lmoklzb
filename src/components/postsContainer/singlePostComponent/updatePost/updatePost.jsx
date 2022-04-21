@@ -10,9 +10,9 @@ const UpdatePost = (props) => {
             <div>
                 <div>
                     <form onSubmit={(e)=>{props.updatePost(props.post.id)}}>
-                        <input onChange={props.handleUpdateInputChange} name="name" type="text" placeholder="Name"></input>
+                        <input onChange={props.handleUpdateInputChange} name="name" type="text"  placeholder="Name"></input>
                         <br></br>
-                        <input onChange={props.handleUpdateInputChange} name="description" placeholder="Description" type="text"/>
+                        <input onChange={props.handleUpdateInputChange} name="description"  placeholder="Description" type="text"/>
                         <br></br>
                         <button type="submit">Submit</button>
                         <button type="close">close</button>
