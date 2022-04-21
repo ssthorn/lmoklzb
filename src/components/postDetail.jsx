@@ -14,6 +14,7 @@ const PostDetail=()=>{
     const getPost = async () => {
         const data = await fetch(
             'http://localhost:8000/api/posts/'
+            // `'http://localhost:8000/api/posts/' + ${post.id}`
         );
         const post = await data.json();
         console.log(post);
@@ -22,6 +23,7 @@ const PostDetail=()=>{
     return(
         <div>
             <h1>item</h1>
+            <h1></h1>
         </div>
     )
 }
