@@ -8,7 +8,7 @@
 //     const [posts, setPosts] = useState ([])
     
 //     const getPosts = async () => {
-//         const getPostsApiResponse = await fetch("http://localhost:8000/api/posts")
+//         const getPostsApiResponse = await fetch("https://immense-lake-74773.herokuapp.com/api/posts")
 //         // const getPostsApiResponse = await fetch("https://immense-lake-74773.herokuapp.com/api/posts")
 //         const parsedPosts = await getPostsApiResponse.json();
 //         setPosts(parsedPosts)
@@ -68,7 +68,7 @@ class ClassPostContainer extends React.Component {
     createNewPost = async (e) => {
         e.preventDefault();
         console.log(this.state.newPosts)
-        const apiResponse = await fetch('http://localhost:8000/api/posts/', {
+        const apiResponse = await fetch('https://immense-lake-74773.herokuapp.com/api/posts/', {
             method: 'POST',
             body: JSON.stringify(this.state.newPosts),
             headers: {
@@ -83,7 +83,7 @@ class ClassPostContainer extends React.Component {
         })
     }
     async getPosts(){
-        const apiResponse = await fetch('http://localhost:8000/api/posts/')
+        const apiResponse = await fetch('https://immense-lake-74773.herokuapp.com/api/posts/')
         const parsedResponse = await apiResponse.json()
         console.log(parsedResponse)
         this.setState({
@@ -92,7 +92,7 @@ class ClassPostContainer extends React.Component {
         
     }
     deletePost = async (idToDelete) => {
-        const deleteResponse = await fetch(`http://localhost:8000/api/posts/${idToDelete}/`, {
+        const deleteResponse = await fetch(`https://immense-lake-74773.herokuapp.com/api/posts/${idToDelete}/`, {
             method: "DELETE"
         })
         console.log(deleteResponse.status)
@@ -114,7 +114,7 @@ class ClassPostContainer extends React.Component {
 
     }
     updatePost = async (idToUpdate) => {
-        const apiResponse = await fetch(`http://localhost:8000/api/posts/${idToUpdate}/`, {
+        const apiResponse = await fetch(`https://immense-lake-74773.herokuapp.com/api/posts/${idToUpdate}/`, {
             method: "PUT",
             body: JSON.stringify(this.state.updatePosts),
             headers: {
