@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import New from "../new";
 import SinglePostComponent from "./singlePostComponent/SinglePostComponent";
 
 const PostsContainer = () => {
@@ -17,6 +18,7 @@ const PostsContainer = () => {
     return (
         <div>
             <h2>Posts Container</h2>
+            
             {/* <button onClick={getPosts}>Get Posts</button>
             <button >Create Post</button> */}
             
