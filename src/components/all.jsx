@@ -131,7 +131,7 @@ class All extends React.Component {
         console.log("rendering")
         return(
             <div>
-                <h2>Posts Container</h2>
+                {/* <h2>Posts Container</h2>
                 <New handleNewPostInputChange={this.handleNewPostInputChange} 
                 creatNewPost={this.createNewPost}/>
                 {this.state.posts.map((post)=>{
@@ -143,7 +143,7 @@ class All extends React.Component {
                 <h2 key={post.id}>
                 <Link to={`/new/${post.id}`}>{post.name}</Link>
                 </h2>
-                ))}
+                ))} */}
 
             </div>
         )

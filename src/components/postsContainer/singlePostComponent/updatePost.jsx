@@ -15,6 +15,7 @@ const UpdatePost = (props) => {
                         <input onChange={props.handleUpdateInputChange} name="description" placeholder="Description" type="text"/>
                         <br></br>
                         <button type="submit">Submit</button>
+                        <button type="close">close</button>
                     </form>
                 </div>
             </div>

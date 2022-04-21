@@ -23,7 +23,6 @@ const PostDetail=()=>{
     return(
         <div>
             <h1>item</h1>
-            <h1></h1>
         </div>
     )
 }

@@ -1,6 +1,11 @@
 import UpdatePost from "./updatePost";
+import { useState } from "react"
 
 const SinglePostComponent = (props) => {
+    const [showing, setShowing] = useState(false)
+    const toggleShowing = () =>{
+        setShowing(!showing)
+    }
 
     return (
         <div id="singlepost">
@@ -16,9 +21,11 @@ const SinglePostComponent = (props) => {
             <p>Yes: {props.post.votesYes}</p>
             <p>No: {props.post.votesNo}</p>
             <button onClick={()=>props.deletePost(props.post.id)}>Delete</button>
-            
+            {showing ?
             <UpdatePost post={props.post} handleUpdateInputChange={props.handleUpdateInputChange} updatePost={props.updatePost} ></UpdatePost>
-        
+            :
+            <button onClick={toggleShowing}>Edit</button>
+            }  
               
         </div>
         
