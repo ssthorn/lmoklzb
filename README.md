@@ -1,8 +1,18 @@
 # lmoklzb
-Project 4 Front
 
+Project 4 Front  +  UX Capstone
+
+Deployed url:
 https://p4front.herokuapp.com/
 
-basic mvp here.  
-react, django ... began learning react-router-dom.
-still needs tons of work to be anything at all!
+Project
+This project will allow users to vote for or against each and all posts published by other users.  It will largely be developed as a user-experience exercise as per the GA UX module requirements.
+
+Stack:
+Django, Node, React, PostgreSQL
+
+MVP:
+As outlined in the GA UX module requirements.
+
+Stretch Goals:
+Fully functional with user model.
