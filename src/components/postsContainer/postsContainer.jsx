@@ -68,7 +68,7 @@ class ClassPostContainer extends React.Component {
     createNewPost = async (e) => {
         e.preventDefault();
         console.log(this.state.newPosts)
-        const apiResponse = await fetch('https://immense-lake-74773.herokuapp.com/api/posts/', {
+        const apiResponse = await fetch('https://immense-lake-74773.herokuapp.com/api/posts', {
             method: 'POST',
             body: JSON.stringify(this.state.newPosts),
             headers: {
@@ -83,7 +83,7 @@ class ClassPostContainer extends React.Component {
         })
     }
     async getPosts(){
-        const apiResponse = await fetch('https://immense-lake-74773.herokuapp.com/api/posts/')
+        const apiResponse = await fetch('https://immense-lake-74773.herokuapp.com/api/posts')
         const parsedResponse = await apiResponse.json()
         console.log(parsedResponse)
         this.setState({
